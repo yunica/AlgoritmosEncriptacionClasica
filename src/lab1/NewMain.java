@@ -55,14 +55,14 @@ public class NewMain {
 //            VIGENERE v = new VIGENERE();
 //            mensj.setCriptograma(v.Encriptar(mensj));
 //            System.out.println(v.Desencriptar(mensj) + "desencriptado");
-        String text = "hola como estamos  ";
+        
         Mensaje mensj = new Mensaje();
-        mensj.setMensaje("hola como estamos I J ");
-        System.out.println(text.replace(" ", ""));
+        mensj.setMensaje("quien te quita lo bailado");
+        mensj.setClave("bachata");
         playfair p = new playfair();
         p.Encriptar(mensj);
         
-        p.CrearMatriz("BACHATA");
+       // p.CrearMatriz("BACHATA");
         
         
     }

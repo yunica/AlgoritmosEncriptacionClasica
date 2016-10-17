@@ -1,18 +1,17 @@
 package lab1;
 
+import PLAYFAIR.playfair;
 import bean.Mensaje;
 import controller.CesarAlgoritmo;
 import controller.Polybius;
 import controller.VIGENERE;
-import gui.general;
-import java.util.ArrayList;
 
 public class Lab1 {
 
-    @SuppressWarnings("empty-statement")
+    
     public static void main(String[] args) {
 
-        System.out.println(" ===  ALGORITMO CESAR =====");
+        System.out.println("\t ===  ALGORITMO CESAR =====");
         Mensaje mensj = new Mensaje();
         CesarAlgoritmo cesar = new CesarAlgoritmo();
         mensj.setMensaje("EL PATIO de mi casa es particular WXYZ");
@@ -34,7 +33,7 @@ public class Lab1 {
         System.out.println(mensj2.getMensaje());
         System.out.println(mensj2.getCriptograma());
 
-        System.out.println("\n ===  ALGORITMO VIGENERE =====");
+        System.out.println("\n\t ===  ALGORITMO VIGENERE =====");
         Mensaje mensj3 = new Mensaje();
         VIGENERE v = new VIGENERE();
         mensj3.setClave("cifra");
@@ -46,10 +45,18 @@ public class Lab1 {
         System.out.println(mensj3.getMensaje());
         System.out.println(mensj3.getCriptograma());
         
+        System.out.println("\n\t ===  ALGORITMO PLAYFAIR =====");
+        Mensaje mensj4 = new Mensaje();
+        playfair plfr = new playfair();
+        mensj4.setMensaje("quien te quita lo bailado");
+        mensj4.setClave("bachata");
+        plfr.Encriptar(mensj4);
+        
+        
         
         //GUI
-        general g = new general();
-        g.setVisible(true);
+//        general g = new general();
+//        g.setVisible(true);
         
         
     }
